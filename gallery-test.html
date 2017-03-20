@@ -152,16 +152,43 @@
              for(var i = 1; i <= imagesObj.length; i++) {
 
                $('#portfolio').append('<div class="tile scale-anm all image' + i + '"><img src="img/image' + i + '.jpg"></div>' );
-               $('.image' + i).click(function(){
-                 var imageUrl = imagesObj[i].imageurl;
-                 vex.dialog.alert({
-                   message: 'Its working!!!',
-                   className: 'vex-theme-wireframe',
-                   image: imageUrl
-                 });
-
-               });
+              //  $('.image' + i).click(function(){
+              //    var imageUrl = imagesObj[i].imageurl;
+              //    vex.dialog.alert({
+              //      message: 'Its working!!!',
+              //      className: 'vex-theme-wireframe',
+              //      image: imageUrl
+              //    });
+              //  });
              }
+
+             $('.image' + '1').click(function(){
+               var imageUrl = imagesObj[0].imageurl;
+               vex.dialog.alert({
+                 message: 'Its working!!!',
+                 className: 'vex-theme-wireframe',
+                 image: imageUrl
+               });
+              });
+
+             $('.image' + '2').click(function(){
+               var imageUrl = imagesObj[1].imageurl;
+               vex.dialog.alert({
+                 message: 'Its working!!!',
+                 className: 'vex-theme-wireframe',
+                 image: imageUrl
+               });
+             });
+
+             $('.image' + '3').click(function(){
+               var imageUrl = imagesObj[2].imageurl;
+               vex.dialog.alert({
+                 message: 'Its working!!!',
+                 className: 'vex-theme-wireframe',
+                 image: imageUrl
+               });
+              });
+
           });
 
 
