@@ -99,7 +99,7 @@
 
           </div>
           <div class="test">
-            CLICK ME BITCH
+            CLICK ME DEAR :)
           </div>
           <div style="clear:both;"></div>
 
@@ -125,69 +125,84 @@
           //   <a class="image2"><img src="img/image2.jpg" alt="" /></a>
           // </div>
 
+
+          var imagesObj = [
+            {
+              name: 'WTA Magazine Cover',
+              description: '',
+              imageurl: 'img/image0.jpg',
+              categories: [ 'Graphic Design', 'Print Design' ]
+            },
+            {
+              name: 'Pixel City',
+              description: '',
+              imageurl: 'img/image1.jpg',
+              categories: [ 'Graphic Design', 'Print Design' ]
+            },
+            {
+              name: 'Self Portrait',
+              description: '',
+              imageurl: 'img/image2.jpg',
+              categories: [ 'Graphic Design', 'Print Design' ]
+            },
+            {
+              name: 'Self Portrait',
+              description: '',
+              imageurl: 'img/image3.jpg',
+              categories: [ 'Graphic Design', 'Print Design' ]
+            },
+            {
+              name: 'Self Portrait',
+              description: '',
+              imageurl: 'img/image4.jpg',
+              categories: [ 'Graphic Design', 'Print Design' ]
+            }
+          ];
+
+          function createCallback(i){
+            return function(){
+                vex.dialog.alert({
+                  message: 'Its working!!!',
+                  className: 'vex-theme-wireframe',
+                  image: imagesObj[i].imageurl
+                });
+            }
+          }
+
           $(document).ready(function() {
-            var imagesObj = [
-              {
-                name: 'WTA Magazine Cover',
-                description: '',
-                imageurl: 'img/image1.jpg',
-                categories: [ 'Graphic Design', 'Print Design' ]
-              },
-              {
-                name: 'Pixel City',
-                description: '',
-                imageurl: 'img/image2.jpg',
-                categories: [ 'Graphic Design', 'Print Design' ]
-              },
-              {
-                name: 'Self Portrait',
-                description: '',
-                imageurl: 'img/image3.jpg',
-                categories: [ 'Graphic Design', 'Print Design' ]
-              }
-            ];
 
-
-
-             for(var i = 1; i <= imagesObj.length; i++) {
+             for(var i = 0; i <= imagesObj.length-1; i++) {
 
                $('#portfolio').append('<div class="tile scale-anm all image' + i + '"><img src="img/image' + i + '.jpg"></div>' );
-              //  $('.image' + i).click(function(){
-              //    var imageUrl = imagesObj[i].imageurl;
-              //    vex.dialog.alert({
-              //      message: 'Its working!!!',
-              //      className: 'vex-theme-wireframe',
-              //      image: imageUrl
-              //    });
-              //  });
+               $('.image' + i).click( createCallback(i) );
              }
 
-             $('.image' + '1').click(function(){
-               var imageUrl = imagesObj[0].imageurl;
-               vex.dialog.alert({
-                 message: 'Its working!!!',
-                 className: 'vex-theme-wireframe',
-                 image: imageUrl
-               });
-              });
-
-             $('.image' + '2').click(function(){
-               var imageUrl = imagesObj[1].imageurl;
-               vex.dialog.alert({
-                 message: 'Its working!!!',
-                 className: 'vex-theme-wireframe',
-                 image: imageUrl
-               });
-             });
-
-             $('.image' + '3').click(function(){
-               var imageUrl = imagesObj[2].imageurl;
-               vex.dialog.alert({
-                 message: 'Its working!!!',
-                 className: 'vex-theme-wireframe',
-                 image: imageUrl
-               });
-              });
+            //  $('.image' + '1').click(function(){
+            //    var imageUrl = imagesObj[0].imageurl;
+            //    vex.dialog.alert({
+            //      message: 'Its working!!!',
+            //      className: 'vex-theme-wireframe',
+            //      image: imageUrl
+            //    });
+            //   });
+             //
+            //  $('.image' + '2').click(function(){
+            //    var imageUrl = imagesObj[1].imageurl;
+            //    vex.dialog.alert({
+            //      message: 'Its working!!!',
+            //      className: 'vex-theme-wireframe',
+            //      image: imageUrl
+            //    });
+            //  });
+             //
+            //  $('.image' + '3').click(function(){
+            //    var imageUrl = imagesObj[2].imageurl;
+            //    vex.dialog.alert({
+            //      message: 'Its working!!!',
+            //      className: 'vex-theme-wireframe',
+            //      image: imageUrl
+            //    });
+            //   });
 
           });
 
