@@ -107,38 +107,38 @@
             name: 'WTA Magazine Cover',
             description: '',
             imageurl: 'img/image0.jpg',
-            categories: [ 'Graphic Design', 'Print Design' ]
+            categories: [ 'web', 'flyers' ]
           },
           {
             name: 'Pixel City',
             description: '',
             imageurl: 'img/image1.jpg',
-            categories: [ 'Graphic Design', 'Print Design' ]
+            categories: [ 'bcards', 'web' ]
           },
           {
             name: 'Self Portrait',
             description: '',
             imageurl: 'img/image2.jpg',
-            categories: [ 'Graphic Design', 'Print Design' ]
+            categories: [ 'flyers' ]
           },
           {
             name: 'Self Portrait',
             description: '',
             imageurl: 'img/image3.jpg',
-            categories: [ 'Graphic Design', 'Print Design' ]
+            categories: [ 'web' ]
           },
           {
             name: 'Self Portrait',
             description: '',
             imageurl: 'img/image4.jpg',
-            categories: [ 'Graphic Design', 'Print Design' ]
+            categories: [ 'flyers', 'bcards' ]
           }
         ];
 
         function createCallback(i){
           return function(){
             vex.dialog.alert({
-              message: 'Its working!!!',
+              message: imagesObj[i].name,
               className: 'vex-theme-wireframe',
               image: imagesObj[i].imageurl
             });
@@ -147,7 +147,7 @@
 
         $(document).ready(function() {
           for(var i = 0; i <= imagesObj.length-1; i++) {
-           $('#portfolio').append('<div class="tile scale-anm all image' + i + '"><img src="img/image' + i + '.jpg"></div>' );
+           $('#portfolio').append('<div class="tile scale-anm all image' + i + ' ' + imagesObj[i].categories[0] + ' ' + imagesObj[i].categories[1] + '"><img src="img/image' + i + '.jpg"></div>' );
            $('.image' + i).click( createCallback(i) );
           }
         });
