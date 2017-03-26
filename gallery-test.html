@@ -106,31 +106,133 @@
           {
             name: 'WTA Magazine Cover',
             description: '',
-            imageurl: 'img/image0.jpg',
+            imageurl: 'img/mag0.jpg',
             categories: [ 'web', 'flyers' ]
-          },
-          {
-            name: 'Pixel City',
-            description: '',
-            imageurl: 'img/image1.jpg',
-            categories: [ 'bcards', 'web' ]
           },
           {
             name: 'Self Portrait',
             description: '',
-            imageurl: 'img/image2.jpg',
+            imageurl: 'img/mag2.jpg',
             categories: [ 'flyers' ]
           },
           {
             name: 'Self Portrait',
             description: '',
-            imageurl: 'img/image3.jpg',
+            imageurl: 'img/pers0.jpg',
             categories: [ 'web' ]
           },
           {
             name: 'Self Portrait',
             description: '',
-            imageurl: 'img/image4.jpg',
+            imageurl: 'img/pers1.jpg',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/poster0.jpg',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/flyers/flyer0.jpg',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/flyers/flyer1.jpg',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/flyers/flyer2.jpg',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/flyers/flyer3.jpg',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/aboard0.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/aboard1.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/aboard2.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/aboard3.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/aboard4.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/aboard5.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/aboard6.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/aboard7.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/sign1.jpg',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/sign2.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/sign3.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/signs0.png',
+            categories: [ 'flyers', 'bcards' ]
+          },
+          {
+            name: 'Self Portrait',
+            description: '',
+            imageurl: 'img/signs/wingfx0.png',
             categories: [ 'flyers', 'bcards' ]
           }
         ];
@@ -147,7 +249,7 @@
 
         $(document).ready(function() {
           for(var i = 0; i <= imagesObj.length-1; i++) {
-           $('#portfolio').append('<div class="tile scale-anm all image' + i + ' ' + imagesObj[i].categories[0] + ' ' + imagesObj[i].categories[1] + '"><img src="img/image' + i + '.jpg"></div>' );
+           $('#portfolio').append('<div class="tile scale-anm all thumbnail image' + i + ' ' + imagesObj[i].categories[0] + ' ' + imagesObj[i].categories[1] + '"><img src="' + imagesObj[i].imageurl + '"></div>' );
            $('.image' + i).click( createCallback(i) );
           }
         });

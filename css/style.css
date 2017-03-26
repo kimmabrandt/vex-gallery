@@ -1,8 +1,33 @@
+/* ========= THUMBNAIL / GALLERY ======== */
+/*.thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+         transform:  translate(-50%,-50%);
+}
+
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
+}
+*/
+
+
+/* ========= MAIN / ETC ======== */
 body {
   background-color: #fff;
 }
-/* ========= MAIN / ETC ======== */
 p {
   line-height: 1.8rem;
 }
