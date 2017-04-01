@@ -1,18 +1,9 @@
 
-body{
-  float: none;
-  margin: auto;
-}
-
 #portfolio {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.scale-anm {
-  transform: scale(1);
 }
 
 .thumbnail {
@@ -25,7 +16,7 @@ body{
   margin: 10px;
 }
 .thumbnail:hover {
-  border: 5px solid rgba(193, 215, 249, .4);
+  border: 5px solid rgb(193, 215, 249);
 }
 .thumbnail img {
   position: absolute;
@@ -59,28 +50,19 @@ body{
       -ms-transform: translate(-30%,-50%);
           transform: translate(-30%,-50%);
 }
-
-/*.item img {
-    height: 200%;
-    margin-bottom: 1rem;
-    border: 1px solid blue;
-}*/
-
-
-
-/*.signs img {
-    height: 200%;
-    margin-bottom: 1rem;
-    -webkit-transform: translate(-60px, -60px);
-        -ms-transform: translate(-60px, -60px);
-           transform: translate(-60px, -60px);
-}*/
+.thumbnail img.madrona {
+  left: -23%;
+  top: 0%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(0%,0%);
+      -ms-transform: translate(0%,0%);
+          transform: translate(0%,0%);
+}
 
 
 
-
-
-
+/* BUTTONS / GALLERY NAV */
 
 .toolbar {
   margin-bottom: 40px;
